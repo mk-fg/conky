@@ -536,7 +536,6 @@ void llua_setup_info(struct information *i, double u_interval) {
   lua_newtable(lua_L);
 
   llua_set_number("update_interval", u_interval);
-  llua_set_number("uptime", i->uptime);
 
   lua_setglobal(lua_L, "conky_info");
 }
@@ -552,7 +551,6 @@ void llua_update_info(struct information *i, double u_interval) {
   }
 
   llua_set_number("update_interval", u_interval);
-  llua_set_number("uptime", i->uptime);
 
   lua_setglobal(lua_L, "conky_info");
 }
